@@ -2,11 +2,11 @@ import React from 'react'
 import { useState } from 'react';
 
 function Couter() {
-    /* membuat sebuat state */
+    /* membuat sebuah state */
     const [count, setCount] = useState(0)
 
     const decrement = () => {
-        if (count > 1) {
+        if (count > 0) {
             setCount(count - 1)
         }
     }
@@ -14,7 +14,8 @@ function Couter() {
     return (
 
         <div>
-            {/* membuat sebuag state */}
+            {/* membuat sebuah state */}
+            {/* membuat sebuah couter bagaimana nantinya nilai yang dihasilkan tidak minus */}
             <button onClick={decrement}>-</button>
             <span> {count} </span>
             <button onClick={() => setCount(count + 1)}>+</button>

@@ -1,19 +1,31 @@
-// 1 import useState
+// import useState
 import { useState } from 'react';
-// import Couter
-import Couter from './component/Couter';
+// import Cartitem
+import Cartitem from './component/Cartitem';
 function App() {
-  // 2 menuliskan useState hooks
+  // menuliskan useState hooks
   // fungsi penulisan (setNama) untuk mengubah data (nama)
   const [nama, setNama] = useState("Baharudin")
+  // membuat data menjadi array agar mudah dibaca
+  const [hewan, setHewan] = useState([
+    "Monyet", "Srigala", "Kura-Kura", "Hiu", "kucing"
+  ])
 
   return (
     <div>
       {/* memanggil useState */}
-      <h2>{nama}</h2>
       {/* bila di tekan akan berubah namanya */}
       <h2 onClick={() => setNama("Fahrul")}>{nama}</h2>
-      <Couter />
+
+      {/* loping data dengan map colback */}
+      {hewan.map((item, index) => (
+        <Cartitem key={index} hewan={item} />
+      ))}
+
+      {/* perbanyak sebuah data manual */}
+      <Cartitem hewan="Monyet" />
+      <Cartitem hewan="Srigala" />
+      <Cartitem hewan="Kura-Kura" />
     </div>
   );
 }
