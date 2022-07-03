@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+// 1 import useState
+import { useState } from 'react';
+// import Couter
+import Couter from './component/Couter';
 function App() {
+  // 2 menuliskan useState hooks
+  // fungsi penulisan (setNama) untuk mengubah data (nama)
+  const [nama, setNama] = useState("Baharudin")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* memanggil useState */}
+      <h2>{nama}</h2>
+      {/* bila di tekan akan berubah namanya */}
+      <h2 onClick={() => setNama("Fahrul")}>{nama}</h2>
+      <Couter />
     </div>
   );
 }
