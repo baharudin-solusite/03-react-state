@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-function Couter() {
+function Counter() {
     /* membuat sebuah state */
     const [count, setCount] = useState(0)
 
@@ -23,4 +23,4 @@ function Couter() {
     )
 }
 
-export default Couter
+export default Counter

@@ -5,9 +5,9 @@ import Cartitem from './component/Cartitem';
 function App() {
   // menuliskan useState hooks
   // fungsi penulisan (setNama) untuk mengubah data (nama)
-  const [nama, setNama] = useState("Baharudin")
+  const [nama, setNama] = useState("Ekosistem")
   // membuat data menjadi array agar mudah dibaca
-  const [hewan, setHewan] = useState([
+  const [hewan] = useState([
     "Monyet", "Srigala", "Kura-Kura", "Hiu", "kucing"
   ])
 
@@ -15,7 +15,7 @@ function App() {
     <div>
       {/* memanggil useState */}
       {/* bila di tekan akan berubah namanya */}
-      <h2 onClick={() => setNama("Fahrul")}>{nama}</h2>
+      <h2 onClick={() => setNama("Hutan")}>{nama}</h2>
 
       {/* loping data dengan map colback */}
       {hewan.map((item, index) => (
